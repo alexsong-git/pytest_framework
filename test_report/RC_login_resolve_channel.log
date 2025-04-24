@@ -1,0 +1,3 @@
+2025-03-26 18:35:32,257 - selenium_test - INFO - start
+2025-03-26 18:35:59,853 - selenium_test - ERROR - twice_fail :  shoplazza FAIL —— data : customer@email.us 2024123089200005970294557123
+2025-03-26 18:35:59,954 - selenium_test - INFO - finish

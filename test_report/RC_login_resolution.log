@@ -1,0 +1,4 @@
+2025-04-24 10:04:29,159 - RC_login_resolution - INFO - start
+2025-04-24 10:04:47,874 - RC_login_resolution - ERROR - shoplazza FAIL —— data : yuchen.song@seel.com 123123, error: 元素未找到
+2025-04-24 10:04:59,631 - RC_login_resolution - ERROR - shoplazza FAIL —— data : yuchen.song@seel.com 123123, error: 元素未找到
+2025-04-24 10:05:07,280 - RC_login_resolution - INFO - finish

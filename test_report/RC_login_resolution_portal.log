@@ -1,0 +1,4 @@
+2025-03-26 18:15:39,207 - selenium_test - INFO - start
+2025-03-26 18:15:50,945 - selenium_test - INFO - RC_login_resolution_portal shoplazza FAIL —— data : customer@email.us 2024123089200005970294557123
+2025-03-26 18:15:54,241 - selenium_test - ERROR - twice_fail :  shoplazza FAIL —— data : customer@email.us 2024123089200005970294557123
+2025-03-26 18:15:54,407 - selenium_test - INFO - finish
