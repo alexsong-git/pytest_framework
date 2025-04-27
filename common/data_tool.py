@@ -21,7 +21,7 @@ def read_data(file_path, sheet_name):
     return all_results
 
 if __name__ == '__main__':
-    file_path = "/Users/alex/PycharmProjects/pytest_framework/data/登陆数据.xlsx"
-    sheet_name = "RC渠道登陆数据"  # 指定要读取的工作表名称
+    file_path = "/Users/alex/登陆数据.xlsx"
+    sheet_name = "MD登陆数据"  # 指定要读取的工作表名称
     data = read_data(file_path, sheet_name)
     print(data)

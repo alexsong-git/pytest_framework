@@ -61,7 +61,7 @@ def log_tool(log_file_path, name):
 
 
 if __name__ == '__main__':
-    path = '/Users/alex/PycharmProjects/pytest_framework/test_report/MD_login.log'
+    path = '/Users/alex/PycharmProjects/pytest_framework/Test_Log/MD_login.log'
     name = 'MD_login.log'
     a = log_tool(path, name)
     a.info('test')

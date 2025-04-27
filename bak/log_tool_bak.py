@@ -19,7 +19,7 @@ def log_tool(log_file_path,name):
     return logger
 
 if __name__=='__main__':
-    path = '/Users/alex/PycharmProjects/pytest_framework/test_report/test_log_resolution.log'
+    path = '/test_log/test_log_resolution.log'
     name = 'test_log_resolution'
     a = log_tool(path,name)
     a.info('test')

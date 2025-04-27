@@ -17,7 +17,7 @@ class Auto_Test(unittest.TestCase):
 
         self.data = read_data("/Users/alex/登陆数据.xlsx","RC渠道登陆数据")
         self.data_twice = []
-        self.path = '/Users/alex/PycharmProjects/pytest_framework/test_report/RC_login_resolve_channel.log'
+        self.path = '/test_log/RC_login_resolve_channel.log'
         self.name = 'RC_login_resolve_channel'
         self.log = log_tool(self.path, self.name)
         self.log.info('start')
