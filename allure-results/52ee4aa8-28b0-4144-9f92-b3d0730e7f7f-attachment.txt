@@ -1,0 +1,2 @@
+日志目录已存在：./Test_Log
+已删除旧的日志文件：./Test_Log/RC_login_resolution.log

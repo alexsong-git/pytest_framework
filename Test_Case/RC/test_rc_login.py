@@ -47,7 +47,7 @@ class TestRCLogin:
         self.driver.implicitly_wait(5)
 
         # 初始化截图路径
-        self.screenshot_path = f"/Users/alex/PycharmProjects/pytest_framework/image/{request.node.name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        self.screenshot_path = f"/Users/alex/PycharmProjects/pytest_framework/image/{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
 
         yield
 

@@ -10,4 +10,8 @@ if __name__ == "__main__":
         "--clean-alluredir"  # 清理之前的 allure 结果目录
     ]
     pytest.main(pytest_args)
+
+#pytest Test_Case --alluredir=./allure-results/
 #allure serve ./allure-results
+#python Test_Case --alluredir=./Test_Report
+#allure serve ./Test_Report

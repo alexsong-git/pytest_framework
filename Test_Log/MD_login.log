@@ -1,2 +1,3 @@
-2025-04-27 14:29:21,180 - MD_login - INFO - start
-2025-04-27 14:29:26,827 - MD_login - INFO - finish
+2025-04-27 17:41:16,916 - MD_login - INFO - start
+2025-04-27 17:41:35,831 - MD_login - ERROR - seel-test-alexsong-1050 FAIL —— data : yuchen.song+1050@seel.com 123, error: 元素未找到
+2025-04-27 17:41:36,143 - MD_login - INFO - finish
