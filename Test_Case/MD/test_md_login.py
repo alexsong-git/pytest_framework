@@ -47,7 +47,7 @@ class TestMDLogin:
         self.driver.implicitly_wait(5)
 
         # 初始化截图路径
-        self.screenshot_path = f"/Users/alex/PycharmProjects/pytest_framework/image/{request.node.name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        self.screenshot_path = f"/Users/alex/PycharmProjects/pytest_framework/image/{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
 
         yield
 
@@ -77,18 +77,18 @@ class TestMDLogin:
             self.log.error(f"{domain} FAIL —— data : {email} {order}, error: 断言失败")
             self.driver.save_screenshot(self.screenshot_path)
             allure.attach.file(self.screenshot_path, name="失败截图", attachment_type=allure.attachment_type.PNG)
-            raise AssertionError(f"Assertion failed，data: {email} {order}, screenshot: {self.screenshot_path}") from None
+            raise AssertionError(f"Assertion failed，data: {email} {order}, screenshot: {self.screenshot_path}")
 
         except NoSuchElementException as ne:
             # 捕获元素未找到的异常，记录日志并截图
             self.log.error(f"{domain} FAIL —— data : {email} {order}, error: 元素未找到")
             self.driver.save_screenshot(self.screenshot_path)
             allure.attach.file(self.screenshot_path, name="失败截图", attachment_type=allure.attachment_type.PNG)
-            raise NoSuchElementException(f"元素未找到，data: {email} {order}, screenshot: {self.screenshot_path}") from None
+            raise AssertionError(f"元素未找到，data: {email} {order}, screenshot: {self.screenshot_path}")
 
         except Exception as e:
             # 捕获其他异常，记录日志并截图
             self.log.error(f"{domain} FAIL —— data : {email} {order}, error: 其他异常")
             self.driver.save_screenshot(self.screenshot_path)
             allure.attach.file(self.screenshot_path, name="失败截图", attachment_type=allure.attachment_type.PNG)
-            raise Exception(f"Unexpected error，data: {email} {order}, screenshot: {self.screenshot_path}") from None
+            raise AssertionError(f"Unexpected error，data: {email} {order}, screenshot: {self.screenshot_path}")
