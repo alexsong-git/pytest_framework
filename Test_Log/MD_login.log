@@ -1,3 +1,10 @@
-2025-07-02 16:52:00,583 - MD_login - INFO - start
-2025-07-02 16:54:14,343 - MD_login - ERROR - seel-test-ew01 FAIL —— data : sc+seeltestew01@seel.com 123123, error: 元素未找到
-2025-07-02 16:54:14,655 - MD_login - INFO - finish
+2025-07-02 17:05:13,842 - MD_login - INFO - start
+2025-07-02 17:05:23,667 - MD_login - ERROR - seel-test-alexsong-1050 FAIL —— data : yuchen.song+1050@seel.com 12345678ABbc!!, error: 其他异常
+2025-07-02 17:05:24,831 - MD_login - ERROR - seel-test-alexsong-1200 FAIL —— data : yuchen.song+1200@seel.com 12345678ABbc!!, error: 其他异常
+2025-07-02 17:05:25,691 - MD_login - ERROR - seel-test-store-dev-env FAIL —— data : access+seel-test-store-dev-env@seel.com SEELrock@2025, error: 其他异常
+2025-07-02 17:05:26,593 - MD_login - ERROR - ShopID1725876195200 FAIL —— data : kai.li@seel.com Lk3487201, error: 其他异常
+2025-07-02 17:05:27,340 - MD_login - ERROR - seel-test-yuchen-4 FAIL —— data : yuchen.song+1500@seel.com 12345678ABbc!!, error: 其他异常
+2025-07-02 17:05:28,137 - MD_login - ERROR - seel-test-alexsong-1500 FAIL —— data : yuchen.song+1500@seel.com 12345678ABbc!!, error: 其他异常
+2025-07-02 17:05:28,908 - MD_login - ERROR - vooglam FAIL —— data : yan+zeelool@seel.com Seel_Seel_2025, error: 其他异常
+2025-07-02 17:05:29,724 - MD_login - ERROR - seel-test-ew01 FAIL —— data : sc+seeltestew01@seel.com 123123, error: 其他异常
+2025-07-02 17:05:29,831 - MD_login - INFO - finish
