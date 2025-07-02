@@ -1,10 +1,10 @@
 import time
 from selenium.webdriver.common.by import By
-from data.md_data import chromedriver_path, url_md_dashboard_dev
+from Test_Data.md_data import chromedriver_path, url_md_dashboard_dev
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 
-def MD_login(driver, email, order):
+def MD_login(driver, email, order, organization):
 
     ele_email = driver.find_element(By.ID, 'email-input')
     ele_email.send_keys(email)
@@ -14,10 +14,11 @@ def MD_login(driver, email, order):
     ele_password.send_keys(order)
     ele_button_2 = driver.find_element(By.ID, 'submit')
     ele_button_2.click()
+    ele_org = driver.find_element(By.XPATH, f"//span[text()='{organization}']")
+    ele_org.click()
     element = driver.find_element(By.XPATH, "//h1[@class='font-bold text-3xl mr-6']").text
 
     return element
-
 
 
 def MD_logout(driver):
@@ -34,7 +35,5 @@ if __name__ == '__main__':
     driver = webdriver.Chrome(service=service)
     driver.implicitly_wait(10)
     driver.get(url_md_dashboard_dev)
-    MD_login(driver,'yuchen.song+1200@seel.com','12345678ABbc!!')
-    #time.sleep(3)
-    MD_logout(driver)
-    #driver.quit()
+    MD_login(driver,'yuchen.song+1200@seel.com','12345678ABbc!!','seel-test-alexsong-1200')
+    driver.quit()

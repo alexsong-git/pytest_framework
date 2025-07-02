@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import NoSuchElementException
-from data.md_data import chromedriver_path, url_md_dashboard_dev
+from Test_Data.md_data import chromedriver_path, url_md_dashboard_dev
 from common.data_tool import read_data
 from common.log_tool import log_tool
 from common.MD_login import MD_login
@@ -44,20 +44,20 @@ class TestMDLogin:
         # 初始化浏览器驱动
         self.service = Service(executable_path=chromedriver_path)
         self.driver = webdriver.Chrome(service=self.service)
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(10)
 
         # 初始化截图路径
-        self.screenshot_path = f"/Users/alex/PycharmProjects/pytest_framework/image/{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        self.screenshot_path = f"image/{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
 
         yield
 
         # 清理操作
         self.driver.quit()
 
-    @pytest.mark.parametrize("url, domain, email, order", read_data("/Users/alex/登陆数据.xlsx", "MD登陆数据"))
+    @pytest.mark.parametrize("url, domain, email, order, channel, organization", read_data("Test_Data/登陆数据.xlsx", "MD登陆数据"))
     @allure.feature("MD 登录功能")
     @allure.story("MD 登录测试")
-    def test_login(self, url, domain, email, order):
+    def test_login(self, url, domain, email, order, channel, organization):
         allure.dynamic.title(f"登录测试 - {domain}")
         allure.dynamic.description(f"测试渠道: {domain}, 邮箱: {email}, 订单号: {order}")
 
@@ -68,7 +68,7 @@ class TestMDLogin:
                 assert "Merchant Dashboard" in self.driver.title
 
             with allure.step("执行登录操作"):
-                element = MD_login(self.driver, email, order)
+                element = MD_login(self.driver, email, order,organization)
                 allure.attach(self.driver.get_screenshot_as_png(), name="登录后页面截图", attachment_type=allure.attachment_type.PNG)
                 assert "Protection" in element
 

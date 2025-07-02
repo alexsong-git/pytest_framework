@@ -4,7 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import NoSuchElementException
-from data.md_data import chromedriver_path, url_md_dashboard_dev
+from Test_Data.md_data import chromedriver_path, url_md_dashboard_dev
 from common.data_tool import read_data
 from common.log_tool import log_tool
 from common.MD_login import MD_login,MD_logout

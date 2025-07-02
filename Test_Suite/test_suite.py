@@ -2,7 +2,6 @@ import pytest
 
 if __name__ == "__main__":
     test_files = [
-        "Test_Case/RC/test_rc_login.py",
         "Test_Case/MD/test_md_login.py"
     ]
     pytest_args = test_files + [
@@ -11,7 +10,7 @@ if __name__ == "__main__":
     ]
     pytest.main(pytest_args)
 
-#pytest Test_Case --alluredir=./allure-results/
+#pytest Test_Case/MD --alluredir=./allure-results/
 #allure serve ./allure-results
-#python Test_Case --alluredir=./Test_Report
+#pytest Test_Case/MD --alluredir=./Test_Report
 #allure serve ./Test_Report

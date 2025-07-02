@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from data.rc_data  import chromedriver_path, url_resolution
+from Test_Data.rc_data  import chromedriver_path, url_resolution
 from common.data_tool  import read_data
 from common.log_tool import log_tool
 from common.resolution_login import resolution_login

@@ -1,23 +1,15 @@
-import unittest
-from Test_Case.RC import RC_login_resolution
-from Test_Case.MD import MD_dashboard_onboarding
+from datetime import datetime
+import pytz
 
+timestamp_start = 1747584000000 / 1000
+timestamp_end = 1747670399000 / 1000
 
-def return_suite():
-    """ 组装并返回 登录模块的测试套件
+# 设置北京时间时区
+beijing_tz = pytz.timezone('Asia/Shanghai')
 
-    :return: 测试套件
-    """
-    # 创建一个测试套件对象
-    suite = unittest.TestSuite()
-    # 创建一个加载器对象
-    loader = unittest.TestLoader()
+# 转换为北京时间
+beijing_time_start = datetime.fromtimestamp(timestamp_start, tz=beijing_tz)
+beijing_time_end = datetime.fromtimestamp(timestamp_end, tz=beijing_tz)
 
-    # 通过加载器将测试用例加载到测试套件中
-    #suite.addTests(loader.loadTestsFromTestCase(login_test_resolve.Auto_Test))
-    #suite.addTests(loader.loadTestsFromTestCase(login_test_resolve_channel.Auto_Test))
-    suite.addTests(loader.loadTestsFromTestCase(RC_login_resolution.TestRCLogin))
-    suite.addTests(loader.loadTestsFromTestCase(MD_dashboard_onboarding.TestMDLogin))
-
-    # 返回组装好的测试套件
-    return suite
+print(beijing_time_start)
+print(beijing_time_end)
