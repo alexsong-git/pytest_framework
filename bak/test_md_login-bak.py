@@ -8,9 +8,18 @@ from common.log_tool import log_tool
 from common.MD_login import MD_login
 from datetime import datetime
 import allure
-from selenium.webdriver.chrome.options import Options
-import tempfile
 
+"""
+@pytest.fixture(scope="session", autouse=True)
+def init_log():
+    # 初始化日志
+    path = '/Users/alex/PycharmProjects/pytest_framework/Test_Log/MD_login.log'
+    name = 'MD_login'
+    log = log_tool(path, name)
+    log.info('start')
+    yield log
+    log.info('finish')
+"""
 
 class TestMDLogin:
 
@@ -29,14 +38,12 @@ class TestMDLogin:
         # 将日志对象赋值给测试类的实例
         self.log = init_log
 
+        # 初始化数据
+        #self.data = read_data("/Users/alex/登陆数据.xlsx", "MD登陆数据")
+
         # 初始化浏览器驱动
-        temp_dir = tempfile.mkdtemp()  # 创建临时目录
-        self.chrome_options = Options()
-        self.chrome_options.add_argument('--headless')  # 使用无头模式执行chrome
-        self.chrome_options.add_argument('--disable-gpu')
-        self.chrome_options.add_argument('--no-sandbox')  # 这个一定要加，不加Chrome启动报错
-        self.chrome_options.add_argument(f"--user-data-dir={temp_dir}")
-        self.driver = webdriver.Chrome(options=self.chrome_options)
+        self.service = Service(executable_path=chromedriver_path)
+        self.driver = webdriver.Chrome(service=self.service)
         self.driver.implicitly_wait(10)
 
         # 初始化截图路径

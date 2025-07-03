@@ -12,5 +12,5 @@ if __name__ == "__main__":
 
 #pytest Test_Case/MD --alluredir=./allure-results/
 #allure serve ./allure-results
-#pytest Test_Case/MD --alluredir=./Test_Report
-#allure serve ./Test_Report
+#pytest Test_Case/MD --alluredir=./allure-results
+#allure serve ./allure-results
