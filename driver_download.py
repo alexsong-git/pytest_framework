@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 options = webdriver.ChromeOptions()
-download_dir = "driver/mac-x64"  # 修改为你的下载目录
+download_dir = "driver/jenkins"  # 修改为你的下载目录
 options.add_argument(f"--download-default-directory={download_dir}")
 options.add_argument(f"--no-sandbox")
 options.add_argument(f"--headless")  # 无头模式，不会打开实际浏览器窗口
