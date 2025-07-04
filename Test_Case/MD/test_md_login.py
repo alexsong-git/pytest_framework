@@ -30,6 +30,12 @@ class TestMDLogin:
         self.log = init_log
 
         # 初始化浏览器驱动
+        """
+        self.service = Service(executable_path=chromedriver_path)
+        self.driver = webdriver.Chrome(service=self.service)
+        self.driver.implicitly_wait(10)
+        """
+
         temp_dir = tempfile.mkdtemp()  # 创建临时目录
         self.chrome_options = Options()
         self.chrome_options.add_argument('--headless')  # 使用无头模式执行chrome
