@@ -1,2 +1,10 @@
-2025-07-04 10:41:54,690 - MD_login - INFO - start
-2025-07-04 10:49:04,030 - MD_login - INFO - finish
+2025-12-24 17:45:24,026 - MD_login - INFO - start
+2025-12-24 17:46:03,780 - MD_login - ERROR - seel-test-alexsong-1050 FAIL —— data : yuchen.song+1050@seel.com 12345678ABbc!!, error: 元素未找到
+2025-12-24 17:46:25,824 - MD_login - ERROR - seel-test-alexsong-1200 FAIL —— data : yuchen.song+1200@seel.com 12345678ABbc!!, error: 元素未找到
+2025-12-24 17:46:47,447 - MD_login - ERROR - seel-test-store-dev-env FAIL —— data : access+seel-test-store-dev-env@seel.com SEELrock@2025, error: 元素未找到
+2025-12-24 17:47:23,088 - MD_login - ERROR - seel-test-yuchen-4 FAIL —— data : yuchen.song+1500@seel.com 12345678ABbc!!, error: 元素未找到
+2025-12-24 17:47:44,623 - MD_login - ERROR - seel-test-alexsong-1500 FAIL —— data : yuchen.song+1500@seel.com 12345678ABbc!!, error: 元素未找到
+2025-12-24 17:48:23,168 - MD_login - ERROR - vooglam FAIL —— data : yan+zeelool@seel.com Seel_Seel_2025, error: 元素未找到
+2025-12-24 17:48:43,719 - MD_login - ERROR - woo-dev FAIL —— data : yuchen.song@seel.com 12345678ABbc!!, error: 元素未找到
+2025-12-24 17:49:06,913 - MD_login - ERROR - seel-test-ew001 FAIL —— data : yuchen.song@seel.com 12345678ABbc!!, error: 元素未找到
+2025-12-24 17:51:15,057 - MD_login - INFO - finish

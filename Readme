@@ -1,0 +1,2 @@
+pytest Test_Case/MD --alluredir=./allure-results --clean-alluredir
+allure serve ./allure-results

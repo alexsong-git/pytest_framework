@@ -36,4 +36,5 @@ if __name__ == '__main__':
     driver.implicitly_wait(10)
     driver.get(url_md_dashboard_dev)
     MD_login(driver,'yuchen.song+1200@seel.com','12345678ABbc!!','seel-test-alexsong-1200')
+    time.sleep(5)
     driver.quit()
