@@ -10,5 +10,5 @@ if __name__ == "__main__":
     ]
     pytest.main(pytest_args)
 
-#pytest Test_Case/MD --alluredir=./allure-results --clean-alluredir
-#allure serve ./allure-results
+#pytest Test_Case/MD --alluredir=./Test_Report --clean-alluredir
+#allure serve ./Test_Report
