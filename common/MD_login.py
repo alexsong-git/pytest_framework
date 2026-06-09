@@ -1,8 +1,9 @@
 import time
 from selenium.webdriver.common.by import By
-from Test_Data.md_data import chromedriver_path, url_md_dashboard_dev
+from Test_Data.md_data import chromedriver_path, url_md_dashboard_dev   # chromedriver_path 可以不再使用，但保留导入不影响
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager   # 新增这一行
 
 def MD_login(driver, email, order, organization):
 
@@ -17,9 +18,7 @@ def MD_login(driver, email, order, organization):
     ele_org = driver.find_element(By.XPATH, f"//span[text()='{organization}']")
     ele_org.click()
     element = driver.find_element(By.XPATH, "//h1[@class='font-bold text-3xl mr-6']").text
-
     return element
-
 
 def MD_logout(driver):
 
@@ -31,10 +30,14 @@ def MD_logout(driver):
 
 
 if __name__ == '__main__':
-    service = Service(executable_path=chromedriver_path)
+    # 获取 ChromeDriver 路径并打印
+    driver_path = ChromeDriverManager().install()
+    print(f"ChromeDriver 下载/缓存路径: {driver_path}")
+
+    service = Service(driver_path)
     driver = webdriver.Chrome(service=service)
     driver.implicitly_wait(10)
     driver.get(url_md_dashboard_dev)
-    MD_login(driver,'yuchen.song+1200@seel.com','12345678ABbc!!','seel-test-alexsong-1200')
+    MD_login(driver, 'yuchen.song+1200@seel.com', '12345678ABbc!!', 'seel-test-alexsong-1200')
     time.sleep(5)
     driver.quit()

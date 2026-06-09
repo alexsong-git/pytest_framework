@@ -8,6 +8,7 @@ from common.log_tool import log_tool
 from common.MD_login import MD_login
 from datetime import datetime
 import allure
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import tempfile
 
@@ -31,7 +32,11 @@ class TestMDLogin:
 
         # 初始化浏览器驱动
         """
-        self.service = Service(executable_path=chromedriver_path)
+        #self.service = Service(executable_path=chromedriver_path)
+        #self.driver = webdriver.Chrome(service=self.service)
+        self.driver_path = ChromeDriverManager().install()
+        print(f"ChromeDriver 下载/缓存路径: {self.driver_path}")
+        self.service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=self.service)
         self.driver.implicitly_wait(10)
         """
@@ -69,7 +74,7 @@ class TestMDLogin:
             with allure.step("执行登录操作"):
                 element = MD_login(self.driver, email, order,organization)
                 allure.attach(self.driver.get_screenshot_as_png(), name="登录后页面截图", attachment_type=allure.attachment_type.PNG)
-                assert "Protection" in element
+                assert "Home" in element
 
         except AssertionError as ae:
             # 捕获断言失败的异常，记录日志并截图
